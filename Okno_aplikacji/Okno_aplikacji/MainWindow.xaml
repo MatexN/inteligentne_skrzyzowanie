@@ -1,0 +1,19 @@
+﻿<Window x:Class="Okno_aplikacji.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Okno_aplikacji"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="371" Width="591">
+    <Grid Margin="0,0,2,-31">
+        <Image x:Name="Background" HorizontalAlignment="Left" Height="282" VerticalAlignment="Top" Width="405" Margin="40,52,0,0" Source="C:\Users\MatexN\Desktop\Projekt PW\Okno_aplikacji\IMG\skrzyzowanie.png"/>
+        <TextBlock x:Name="V_down" HorizontalAlignment="Left" Margin="204,294,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Foreground="Gold"/>
+        <TextBlock x:Name="V_up" HorizontalAlignment="Left" Margin="204,70,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Foreground="Gold"/>
+        <TextBlock x:Name="H_right" HorizontalAlignment="Left" Margin="372,169,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Foreground="Gold"/>
+        <TextBlock x:Name="H_left" HorizontalAlignment="Left" Margin="50,169,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" RenderTransformOrigin="-0.082,0.812" Foreground="Gold"/>
+        <Label x:Name="label" Content="Ilość pojazdów oczekujących na przejazd przez inteligentne skrzyżowanie" HorizontalAlignment="Left" Margin="40,21,0,0" VerticalAlignment="Top" Width="405"/>
+        <Button x:Name="Start_Button" Content="Start" HorizontalAlignment="Left" Margin="471,66,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.52,-1.15"/>
+        <Button x:Name="Stop_Button" Content="Stop" HorizontalAlignment="Left" Margin="471,112,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.493,-0.8"/>
+    </Grid>
+</Window>
