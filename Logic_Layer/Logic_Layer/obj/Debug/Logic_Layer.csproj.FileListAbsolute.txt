@@ -1,0 +1,6 @@
+D:\Maciej\Projekty GIT\Inteligentne skrzyżowanie\Logic_Layer\Logic_Layer\bin\Debug\Logic_Layer.exe.config
+D:\Maciej\Projekty GIT\Inteligentne skrzyżowanie\Logic_Layer\Logic_Layer\bin\Debug\Logic_Layer.exe
+D:\Maciej\Projekty GIT\Inteligentne skrzyżowanie\Logic_Layer\Logic_Layer\bin\Debug\Logic_Layer.pdb
+D:\Maciej\Projekty GIT\Inteligentne skrzyżowanie\Logic_Layer\Logic_Layer\obj\Debug\Logic_Layer.csprojResolveAssemblyReference.cache
+D:\Maciej\Projekty GIT\Inteligentne skrzyżowanie\Logic_Layer\Logic_Layer\obj\Debug\Logic_Layer.exe
+D:\Maciej\Projekty GIT\Inteligentne skrzyżowanie\Logic_Layer\Logic_Layer\obj\Debug\Logic_Layer.pdb
