@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="371" Width="591">
     <Grid Margin="0,0,2,-31">
-        <Image x:Name="Background" HorizontalAlignment="Left" Height="282" VerticalAlignment="Top" Width="405" Margin="40,52,0,0" Source="pack://Okno_aplikacji/IMG/skrzyzowanie.png"/>
+        <Image x:Name="Background" HorizontalAlignment="Left" Height="282" VerticalAlignment="Top" Width="405" Margin="40,52,0,0" Source="IMG/skrzyzowanie.png"/>
         <TextBlock x:Name="V_down" HorizontalAlignment="Left" Margin="204,294,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Foreground="Gold"/>
         <TextBlock x:Name="V_up" HorizontalAlignment="Left" Margin="204,70,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Foreground="Gold"/>
         <TextBlock x:Name="H_right" HorizontalAlignment="Left" Margin="372,169,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Foreground="Gold"/>

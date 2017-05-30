@@ -8,11 +8,71 @@ namespace Logic_Layer
 {
     public class QueueOfCars
     {
-        public Queue<Vehicle> _up = new Queue<Vehicle>();
-        public Queue<Vehicle> _down = new Queue<Vehicle>();
-        public Queue<Vehicle> _left = new Queue<Vehicle>();
-        public Queue<Vehicle> _right = new Queue<Vehicle>();
+        private Queue<Vehicle> _up = new Queue<Vehicle>();
+        private Queue<Vehicle> _down = new Queue<Vehicle>();
+        private Queue<Vehicle> _left = new Queue<Vehicle>();
+        private Queue<Vehicle> _right = new Queue<Vehicle>();
 
+        public void AddToQueue(Vehicle vehicle)
+        {
+            var choosing = new Random();
+            int chosenQueue = choosing.Next(1, 4);
+            switch (chosenQueue)
+            {
+                case 1:
+                    _up.Enqueue(vehicle);
+                    break;
+                case 2:
+                    _down.Enqueue(vehicle);
+                    break;
+                case 3:
+                    _left.Enqueue(vehicle);
+                    break;
+                case 4:
+                    _right.Enqueue(vehicle);
+                    break;
+            }
+        }
+
+        public Vehicle RemoveFromQueue(int side)
+        {
+            switch (side)
+            {
+                case 1:
+                    return _up.Dequeue();
+                case 2:
+                    return _down.Dequeue();
+                case 3:
+                    return _left.Dequeue();
+                case 4:
+                    return _right.Dequeue();
+                default:
+                    return null; //Tu jakiejs funkcji się używa ale nie pamiętam, zapytamy się na zajęciach;
+            }
+        }
+
+        public int QueueLenght(int side)
+        {
+            int amountOfVehicles;
+            switch (side)
+            {
+                case 1:
+                    amountOfVehicles = _up.Count();
+                    break;
+                case 2:
+                    amountOfVehicles = _down.Count();
+                    break;
+                case 3:
+                    amountOfVehicles = _left.Count();
+                    break;
+                case 4:
+                    amountOfVehicles = _right.Count();
+                    break;
+                default:
+                    return 0;  //warunek dotyczący wyboru 1 z 4 jezdni będzie wyznaczany przed wywołaniem funkcji, te defaulty są tylko po to by visual skompilował
+            }
+            return amountOfVehicles;
+        }
 
     }
 }

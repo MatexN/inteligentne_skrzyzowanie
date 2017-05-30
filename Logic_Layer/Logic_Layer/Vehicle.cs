@@ -10,8 +10,9 @@ namespace Logic_Layer
     {
         private int _speed;
         private string _type;
+        private QueueOfCars _queueOfCars;
 
-        public Vehicle(string type)
+        public Vehicle(string type, QueueOfCars queueOfCars)
         {
             _type = type;
             if (type == "jednoslad")
@@ -20,6 +21,11 @@ namespace Logic_Layer
                 _speed = 3;
             if (type == "osobowy")
                 _speed = 2;
+            _queueOfCars = queueOfCars;
+        }
+
+        public void Arrive()
+        {
         }
     }
 }
