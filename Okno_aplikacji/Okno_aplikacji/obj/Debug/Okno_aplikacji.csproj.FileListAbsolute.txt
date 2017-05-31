@@ -1,0 +1,17 @@
+D:\Maciej\Projekty GIT\Inteligentne skrzyżowanie\Okno_aplikacji\Okno_aplikacji\bin\Debug\Okno_aplikacji.exe.config
+D:\Maciej\Projekty GIT\Inteligentne skrzyżowanie\Okno_aplikacji\Okno_aplikacji\bin\Debug\Okno_aplikacji.exe
+D:\Maciej\Projekty GIT\Inteligentne skrzyżowanie\Okno_aplikacji\Okno_aplikacji\bin\Debug\Okno_aplikacji.pdb
+D:\Maciej\Projekty GIT\Inteligentne skrzyżowanie\Okno_aplikacji\Okno_aplikacji\bin\Debug\Logic_Layer.exe
+D:\Maciej\Projekty GIT\Inteligentne skrzyżowanie\Okno_aplikacji\Okno_aplikacji\bin\Debug\Logic_Layer.pdb
+D:\Maciej\Projekty GIT\Inteligentne skrzyżowanie\Okno_aplikacji\Okno_aplikacji\bin\Debug\Logic_Layer.exe.config
+D:\Maciej\Projekty GIT\Inteligentne skrzyżowanie\Okno_aplikacji\Okno_aplikacji\obj\Debug\Okno_aplikacji.csprojResolveAssemblyReference.cache
+D:\Maciej\Projekty GIT\Inteligentne skrzyżowanie\Okno_aplikacji\Okno_aplikacji\obj\Debug\MainWindow.g.cs
+D:\Maciej\Projekty GIT\Inteligentne skrzyżowanie\Okno_aplikacji\Okno_aplikacji\obj\Debug\App.g.cs
+D:\Maciej\Projekty GIT\Inteligentne skrzyżowanie\Okno_aplikacji\Okno_aplikacji\obj\Debug\Okno_aplikacji_MarkupCompile.cache
+D:\Maciej\Projekty GIT\Inteligentne skrzyżowanie\Okno_aplikacji\Okno_aplikacji\obj\Debug\Okno_aplikacji_MarkupCompile.lref
+D:\Maciej\Projekty GIT\Inteligentne skrzyżowanie\Okno_aplikacji\Okno_aplikacji\obj\Debug\MainWindow.baml
+D:\Maciej\Projekty GIT\Inteligentne skrzyżowanie\Okno_aplikacji\Okno_aplikacji\obj\Debug\Okno_aplikacji.g.resources
+D:\Maciej\Projekty GIT\Inteligentne skrzyżowanie\Okno_aplikacji\Okno_aplikacji\obj\Debug\Okno_aplikacji.Properties.Resources.resources
+D:\Maciej\Projekty GIT\Inteligentne skrzyżowanie\Okno_aplikacji\Okno_aplikacji\obj\Debug\Okno_aplikacji.csproj.GenerateResource.Cache
+D:\Maciej\Projekty GIT\Inteligentne skrzyżowanie\Okno_aplikacji\Okno_aplikacji\obj\Debug\Okno_aplikacji.exe
+D:\Maciej\Projekty GIT\Inteligentne skrzyżowanie\Okno_aplikacji\Okno_aplikacji\obj\Debug\Okno_aplikacji.pdb

@@ -11,12 +11,18 @@ namespace Logic_Layer
         public int _amountOfVehicles;
         private int _timeToGo = 20;
         private string _type;
+        private QueueOfCars _queueOfCars;
 
-        public Street(string type)
+        public Street(string type, QueueOfCars queueOfCars)
         {
             _type = type;
+            _queueOfCars = queueOfCars;
         }
 
+        public void Leave()
+        {
+
+        }
 
     }
 }
