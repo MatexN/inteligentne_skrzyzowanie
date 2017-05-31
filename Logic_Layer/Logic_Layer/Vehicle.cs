@@ -26,6 +26,13 @@ namespace Logic_Layer
 
         public void Arrive()
         {
+
+            _queueOfCars.AddToQueue(this);
+        }
+
+        public int GetSpeed()
+        {
+            return _speed;
         }
     }
 }

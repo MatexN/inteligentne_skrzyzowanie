@@ -9,19 +9,15 @@ namespace Logic_Layer
 {
     public class Program
     {
+        public Database database = new Database();
         static void Main(string[] args)
         {
-            var jednoslad = new Vehicle("jednoslad");
-            var osobowy = new Vehicle("osobowy");
-            var ciezarowy = new Vehicle("ciezarowy");
-            var jezdniaV = new Street("Vertical");
-            var jezdniaH = new Street("Horizontal");
-            var kolejkaSamochodow = new QueueOfCars();
-        }
-        public List<DataItem> GetList()
-        {
-            var tmp = new Database().GetData();
-            return tmp;
+            var queueOfCars = new QueueOfCars();
+            var sTrack = new Vehicle("jednoslad", queueOfCars);
+            var car = new Vehicle("osobowy", queueOfCars);
+            var truck = new Vehicle("ciezarowy", queueOfCars);
+            var StreetV = new Street("Vertical", queueOfCars);
+            var StreetH = new Street("Horizontal", queueOfCars);
         }
     }
 }
