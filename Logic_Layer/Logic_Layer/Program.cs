@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Database_Layer;
 
 namespace Logic_Layer
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -16,7 +17,11 @@ namespace Logic_Layer
             var jezdniaV = new Street("Vertical");
             var jezdniaH = new Street("Horizontal");
             var kolejkaSamochodow = new QueueOfCars();
-            Console.ReadLine();
+        }
+        public List<DataItem> GetList()
+        {
+            var tmp = new Database().GetData();
+            return tmp;
         }
     }
 }

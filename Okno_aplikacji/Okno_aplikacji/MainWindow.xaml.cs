@@ -23,7 +23,21 @@ namespace Okno_aplikacji
         public MainWindow()
         {
             InitializeComponent();
-            //background.Source= new BitmapImage(new Uri("../../IMG/skrzyzowanie.png"));
+            ColumnSNumber.Binding = new Binding("SessionNumber");
+            ColumnSTime.Binding = new Binding("SessionTime");
+            ColumnSTrack.Binding = new Binding("STrack");
+            ColumnCar.Binding = new Binding("Car");
+            ColumnTruck.Binding = new Binding("Truck");
+            FillTable();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            TablePopup.IsOpen = !TablePopup.IsOpen;
+        }
+
+        private void FillTable()
+        {
         }
     }
 }
