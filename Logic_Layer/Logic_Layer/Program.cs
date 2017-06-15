@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace Logic_Layer
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
-            var jednoslad = new Vehicle("jednoslad");
-            var osobowy = new Vehicle("osobowy");
-            var ciezarowy = new Vehicle("ciezarowy");
-            var jezdniaV = new Street("Vertical");
-            var jezdniaH = new Street("Horizontal");
             var kolejkaSamochodow = new QueueOfCars();
+            var jednoslad = new Vehicle("jednoslad",kolejkaSamochodow);
+            var osobowy = new Vehicle("osobowy",kolejkaSamochodow);
+            var ciezarowy = new Vehicle("ciezarowy",kolejkaSamochodow);
+            var jezdniaV = new Street("Vertical",kolejkaSamochodow);
+            var jezdniaH = new Street("Horizontal",kolejkaSamochodow);
             Console.ReadLine();
         }
     }
