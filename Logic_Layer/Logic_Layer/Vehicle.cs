@@ -26,13 +26,24 @@ namespace Logic_Layer
 
         public void Arrive()
         {
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4593f106afdfacf27f3f22c138bf59def06fc906
             _queueOfCars.AddToQueue(this);
         }
 
         public int GetSpeed()
         {
             return _speed;
+<<<<<<< HEAD
+=======
+        }
+
+        public string GetVehicleType()
+        {
+            return _type;
+>>>>>>> 4593f106afdfacf27f3f22c138bf59def06fc906
         }
     }
 }
