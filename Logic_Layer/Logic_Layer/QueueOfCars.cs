@@ -12,11 +12,10 @@ namespace Logic_Layer
         private Queue<Vehicle> _down = new Queue<Vehicle>();
         private Queue<Vehicle> _left = new Queue<Vehicle>();
         private Queue<Vehicle> _right = new Queue<Vehicle>();
+        private Object _monitor = new Object();
 
-        public void AddToQueue(Vehicle vehicle)
+        public void AddToQueue(Vehicle vehicle, int chosenQueue)
         {
-            var choosing = new Random();
-            int chosenQueue = choosing.Next(1, 4);
             switch (chosenQueue)
             {
                 case 1:

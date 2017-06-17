@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace Logic_Layer
 {
@@ -11,6 +12,7 @@ namespace Logic_Layer
         private int _speed;
         private string _type;
         private QueueOfCars _queueOfCars;
+        private bool _running = true;
 
         public Vehicle(string type, QueueOfCars queueOfCars)
         {
@@ -26,24 +28,31 @@ namespace Logic_Layer
 
         public void Arrive()
         {
-<<<<<<< HEAD
-
-=======
->>>>>>> 4593f106afdfacf27f3f22c138bf59def06fc906
-            _queueOfCars.AddToQueue(this);
+            var choosing = new Random();
+            while (_running)
+            {
+                int chosenQueue = choosing.Next(1, 5);
+                if (_queueOfCars.QueueLenght(chosenQueue) < 20)
+                {
+                    _queueOfCars.AddToQueue(this, chosenQueue);
+                }
+                Thread.Sleep(_speed *40);
+            }
         }
 
         public int GetSpeed()
         {
             return _speed;
-<<<<<<< HEAD
-=======
         }
 
         public string GetVehicleType()
         {
             return _type;
->>>>>>> 4593f106afdfacf27f3f22c138bf59def06fc906
+        }
+
+        public void Stop()
+        {
+            _running = false;
         }
     }
 }

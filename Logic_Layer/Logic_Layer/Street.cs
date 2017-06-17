@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace Logic_Layer
 {
@@ -11,17 +12,17 @@ namespace Logic_Layer
         private int _timeToGo = 20;
         private string _type;
         private QueueOfCars _queueOfCars;
-<<<<<<< HEAD
+        private Object _monitor;
+        private bool _running = true;
         public int First { get; set; }
         public int Second { get; set; }
-=======
         public int _amountOfSTrack;
         public int _amountOfCar;
         public int _amountOfTruck;
->>>>>>> 4593f106afdfacf27f3f22c138bf59def06fc906
 
-        public Street(string type, QueueOfCars queueOfCars)
+        public Street(string type, QueueOfCars queueOfCars, Object monitor)
         {
+            _monitor = monitor;
             _type = type;
             _queueOfCars = queueOfCars;
             _amountOfCar = 0;
@@ -29,45 +30,54 @@ namespace Logic_Layer
             _amountOfTruck = 0;
         }
 
-        public void LeaveV()
+        public void Leave()
         {
-<<<<<<< HEAD
-                var leavingVehicle = _queueOfCars.RemoveFromQueue(1);
-                var leavingVehicle2 = _queueOfCars.RemoveFromQueue(2);
-                if (First > 0 && Second > 0)
-                {
-                    if (leavingVehicle!=null)
-                    {
-                        First = First - leavingVehicle.GetSpeed();
-                    }
-                    if (leavingVehicle2 != null)
-                    {
-                        Second = Second - leavingVehicle2.GetSpeed();
-                    }
-                    
-                }
-=======
-            int side1 = _timeToGo;
-            int side2 = _timeToGo;
-            while (side1 > 0 && side2 > 0)
+            while (_running)
             {
-                if (_type == "Vertical")
+                int side1 = _timeToGo;
+                int side2 = _timeToGo;
+                lock (_monitor)
                 {
-                    var vehicle1 = _queueOfCars.RemoveFromQueue(1);
-                    side1 -= vehicle1.GetSpeed();
-                    AddAmount(vehicle1);
-                    var vehicle2 = _queueOfCars.RemoveFromQueue(2);
-                    side2 -= vehicle2.GetSpeed();
-                    AddAmount(vehicle2);
+                    Monitor.PulseAll(_monitor);
+                    Thread.Sleep(500);
                 }
-                else
+                while (side1 > 0 && side2 > 0)
                 {
-                    var vehicle1 = _queueOfCars.RemoveFromQueue(3);
-                    side1 -= vehicle1.GetSpeed();
-                    AddAmount(vehicle1);
-                    var vehicle2 = _queueOfCars.RemoveFromQueue(4);
-                    side2 -= vehicle2.GetSpeed();
-                    AddAmount(vehicle2);
+
+                    if (_type == "Vertical")
+                    {
+                        if (_queueOfCars.QueueLenght(1) > 0)
+                        {
+                            var vehicle1 = _queueOfCars.RemoveFromQueue(1);
+                            side1 -= vehicle1.GetSpeed();
+                            AddAmount(vehicle1);
+                        }
+                        if (_queueOfCars.QueueLenght(2) > 0)
+                        {
+                            var vehicle2 = _queueOfCars.RemoveFromQueue(2);
+                            side2 -= vehicle2.GetSpeed();
+                            AddAmount(vehicle2);
+                        }
+                        if (_queueOfCars.QueueLenght(1) == 0 && _queueOfCars.QueueLenght(2) == 0)
+                            break;
+                    }
+                    else
+                    {
+                        if (_queueOfCars.QueueLenght(3) > 0)
+                        {
+                            var vehicle1 = _queueOfCars.RemoveFromQueue(3);
+                            side1 -= vehicle1.GetSpeed();
+                            AddAmount(vehicle1);
+                        }
+                        if (_queueOfCars.QueueLenght(4) > 0)
+                        {
+                            var vehicle2 = _queueOfCars.RemoveFromQueue(4);
+                            side2 -= vehicle2.GetSpeed();
+                            AddAmount(vehicle2);
+                        }
+                        if (_queueOfCars.QueueLenght(3) == 0 && _queueOfCars.QueueLenght(4) == 0)
+                            break;
+                    }
                 }
             }
         }
@@ -87,24 +97,11 @@ namespace Logic_Layer
             {
                 _amountOfTruck++;
             }
->>>>>>> 4593f106afdfacf27f3f22c138bf59def06fc906
         }
-        public void LeaveH()
-        {
-            var leavingVehicle = _queueOfCars.RemoveFromQueue(3);
-            var leavingVehicle2 = _queueOfCars.RemoveFromQueue(4);
-            if (First > 0 && Second > 0)
-            {
-                if (leavingVehicle != null)
-                {
-                    First = First - leavingVehicle.GetSpeed();
-                }
-                if (leavingVehicle2 != null)
-                {
-                    Second = Second - leavingVehicle2.GetSpeed();
-                }
 
-            }
+        public void Stop()
+        {
+            _running = false;
         }
     }
 }

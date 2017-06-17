@@ -1,0 +1,6 @@
+C:\Users\MatexN\Desktop\Projekt PW\Okno_aplikacji\Database_Layer\bin\Debug\Database_Layer.exe.config
+C:\Users\MatexN\Desktop\Projekt PW\Okno_aplikacji\Database_Layer\bin\Debug\Database_Layer.exe
+C:\Users\MatexN\Desktop\Projekt PW\Okno_aplikacji\Database_Layer\bin\Debug\Database_Layer.pdb
+C:\Users\MatexN\Desktop\Projekt PW\Okno_aplikacji\Database_Layer\obj\Debug\Database_Layer.csprojResolveAssemblyReference.cache
+C:\Users\MatexN\Desktop\Projekt PW\Okno_aplikacji\Database_Layer\obj\Debug\Database_Layer.exe
+C:\Users\MatexN\Desktop\Projekt PW\Okno_aplikacji\Database_Layer\obj\Debug\Database_Layer.pdb
