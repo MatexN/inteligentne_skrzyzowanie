@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2D8E48E7-A569-4C68-903E-1C07C56C1A93}</ProjectGuid>
+    <ProjectGuid>{5B37DA80-925D-4F90-8EED-570519AA85F5}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Logic_Layer</RootNamespace>
-    <AssemblyName>Logic_Layer</AssemblyName>
+    <RootNamespace>Database_Layer</RootNamespace>
+    <AssemblyName>Database_Layer</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -21,7 +21,6 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -43,20 +42,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="DataItem.cs" />
+    <Compile Include="Database.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QueueOfCars.cs" />
-    <Compile Include="Street.cs" />
-    <Compile Include="Vehicle.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\Okno_aplikacji\Database_Layer\Database_Layer.csproj">
-      <Project>{5b37da80-925d-4f90-8eed-570519aa85f5}</Project>
-      <Name>Database_Layer</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

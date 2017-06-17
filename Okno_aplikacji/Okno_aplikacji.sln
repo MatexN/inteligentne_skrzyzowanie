@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Okno_aplikacji", "Okno_apli
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logic_Layer", "..\Logic_Layer\Logic_Layer\Logic_Layer.csproj", "{2D8E48E7-A569-4C68-903E-1C07C56C1A93}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Database_Layer", "Database_Layer\Database_Layer.csproj", "{5B37DA80-925D-4F90-8EED-570519AA85F5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{2D8E48E7-A569-4C68-903E-1C07C56C1A93}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2D8E48E7-A569-4C68-903E-1C07C56C1A93}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2D8E48E7-A569-4C68-903E-1C07C56C1A93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B37DA80-925D-4F90-8EED-570519AA85F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B37DA80-925D-4F90-8EED-570519AA85F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B37DA80-925D-4F90-8EED-570519AA85F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B37DA80-925D-4F90-8EED-570519AA85F5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

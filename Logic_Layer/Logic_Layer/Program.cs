@@ -3,20 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Database_Layer;
 
 namespace Logic_Layer
 {
     public class Program
     {
+        public Database _database = new Database();
         static void Main(string[] args)
         {
-            var kolejkaSamochodow = new QueueOfCars();
-            var jednoslad = new Vehicle("jednoslad",kolejkaSamochodow);
-            var osobowy = new Vehicle("osobowy",kolejkaSamochodow);
-            var ciezarowy = new Vehicle("ciezarowy",kolejkaSamochodow);
-            var jezdniaV = new Street("Vertical",kolejkaSamochodow);
-            var jezdniaH = new Street("Horizontal",kolejkaSamochodow);
-            Console.ReadLine();
+        }
+
+        public void FillBase(string sessionTime, string sTrack, string car, string truck)
+        {
+            _database.FillDatabase(sessionTime, sTrack, car, truck);
         }
     }
 }

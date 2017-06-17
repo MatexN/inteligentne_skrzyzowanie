@@ -4,3 +4,12 @@ D:\Maciej\Projekty GIT\Inteligentne skrzyżowanie\Logic_Layer\Logic_Layer\bin\De
 D:\Maciej\Projekty GIT\Inteligentne skrzyżowanie\Logic_Layer\Logic_Layer\obj\Debug\Logic_Layer.csprojResolveAssemblyReference.cache
 D:\Maciej\Projekty GIT\Inteligentne skrzyżowanie\Logic_Layer\Logic_Layer\obj\Debug\Logic_Layer.exe
 D:\Maciej\Projekty GIT\Inteligentne skrzyżowanie\Logic_Layer\Logic_Layer\obj\Debug\Logic_Layer.pdb
+C:\Users\MatexN\Desktop\Projekt PW\Logic_Layer\Logic_Layer\bin\Debug\Logic_Layer.exe.config
+C:\Users\MatexN\Desktop\Projekt PW\Logic_Layer\Logic_Layer\bin\Debug\Logic_Layer.exe
+C:\Users\MatexN\Desktop\Projekt PW\Logic_Layer\Logic_Layer\bin\Debug\Logic_Layer.pdb
+C:\Users\MatexN\Desktop\Projekt PW\Logic_Layer\Logic_Layer\bin\Debug\Database_Layer.exe
+C:\Users\MatexN\Desktop\Projekt PW\Logic_Layer\Logic_Layer\bin\Debug\Database_Layer.pdb
+C:\Users\MatexN\Desktop\Projekt PW\Logic_Layer\Logic_Layer\bin\Debug\Database_Layer.exe.config
+C:\Users\MatexN\Desktop\Projekt PW\Logic_Layer\Logic_Layer\obj\Debug\Logic_Layer.csprojResolveAssemblyReference.cache
+C:\Users\MatexN\Desktop\Projekt PW\Logic_Layer\Logic_Layer\obj\Debug\Logic_Layer.exe
+C:\Users\MatexN\Desktop\Projekt PW\Logic_Layer\Logic_Layer\obj\Debug\Logic_Layer.pdb

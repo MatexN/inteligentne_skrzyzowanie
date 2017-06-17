@@ -5,15 +5,31 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Okno_aplikacji"
         mc:Ignorable="d"
-        Title="MainWindow" Height="371" Width="591">
+        Title="MainWindow" Height="396" Width="591">
     <Grid Margin="0,0,2,-31">
         <Image x:Name="Background" HorizontalAlignment="Left" Height="282" VerticalAlignment="Top" Width="405" Margin="40,52,0,0" Source="IMG/skrzyzowanie.png"/>
-        <TextBlock x:Name="V_down" HorizontalAlignment="Left" Margin="204,294,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Foreground="Gold"/>
-        <TextBlock x:Name="V_up" HorizontalAlignment="Left" Margin="204,70,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Foreground="Gold"/>
-        <TextBlock x:Name="H_right" HorizontalAlignment="Left" Margin="372,169,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Foreground="Gold"/>
-        <TextBlock x:Name="H_left" HorizontalAlignment="Left" Margin="50,169,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" RenderTransformOrigin="-0.082,0.812" Foreground="Gold"/>
+        <TextBlock x:Name="V_down" HorizontalAlignment="Left" Margin="204,199,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Foreground="Gold"/>
+        <TextBlock x:Name="V_up" HorizontalAlignment="Left" Margin="204,159,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Foreground="Gold"/>
+        <TextBlock x:Name="H_right" HorizontalAlignment="Left" Margin="273,172,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Foreground="Gold" RenderTransformOrigin="3.51,0.75"/>
+        <TextBlock x:Name="H_left" HorizontalAlignment="Left" Margin="138,172,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" RenderTransformOrigin="-0.082,0.812" Foreground="Gold"/>
         <Label x:Name="label" Content="Ilość pojazdów oczekujących na przejazd przez inteligentne skrzyżowanie" HorizontalAlignment="Left" Margin="40,21,0,0" VerticalAlignment="Top" Width="405"/>
-        <Button x:Name="Start_Button" Content="Start" HorizontalAlignment="Left" Margin="471,66,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.52,-1.15"/>
-        <Button x:Name="Stop_Button" Content="Stop" HorizontalAlignment="Left" Margin="471,112,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.493,-0.8"/>
+        <Button x:Name="Start_Button" Content="Start" HorizontalAlignment="Left" Margin="471,66,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.52,-1.15" Click="Start_Button_Click" IsEnabled="True"/>
+        <Button x:Name="Stop_Button" Content="Stop" HorizontalAlignment="Left" Margin="471,112,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.493,-0.8" IsEnabled="False" Click="Stop_Button_Click"/>
+        <Button Content="Statystyki" HorizontalAlignment="Left" Margin="471,295,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <Popup Placement="Bottom" AllowsTransparency="True"  PopupAnimation="Fade" x:Name="TablePopup" VerticalOffset="-395" HorizontalOffset="590">
+            <StackPanel Background="LightGray">
+                <Label Content="Statystyki" HorizontalAlignment="Center" />
+                <DataGrid x:Name="Statistics" HorizontalAlignment="Center" Background="Black" Width="292">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Nr Sesji" x:Name="ColumnSNumber"/>
+                        <DataGridTextColumn Header="Czas sesji" x:Name="ColumnSTime" />
+                        <DataGridTextColumn Header="L. Jednośladów" x:Name="ColumnSTrack"/>
+                        <DataGridTextColumn Header="L. Aut" x:Name="ColumnCar" />
+                        <DataGridTextColumn Header="L. Tirów" x:Name="ColumnTruck" />
+                    </DataGrid.Columns>
+
+                </DataGrid>
+            </StackPanel>
+        </Popup>
     </Grid>
 </Window>
