@@ -52,11 +52,5 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\Okno_aplikacji\Database_Layer\Database_Layer.csproj">
-      <Project>{5b37da80-925d-4f90-8eed-570519aa85f5}</Project>
-      <Name>Database_Layer</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

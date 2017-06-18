@@ -16,37 +16,43 @@ namespace Logic_Layer
 
         public void AddToQueue(Vehicle vehicle, int chosenQueue)
         {
-            switch (chosenQueue)
+            lock (_monitor)
             {
-                case 1:
-                    _up.Enqueue(vehicle);
-                    break;
-                case 2:
-                    _down.Enqueue(vehicle);
-                    break;
-                case 3:
-                    _left.Enqueue(vehicle);
-                    break;
-                case 4:
-                    _right.Enqueue(vehicle);
-                    break;
+                switch (chosenQueue)
+                {
+                    case 1:
+                        _up.Enqueue(vehicle);
+                        break;
+                    case 2:
+                        _down.Enqueue(vehicle);
+                        break;
+                    case 3:
+                        _left.Enqueue(vehicle);
+                        break;
+                    case 4:
+                        _right.Enqueue(vehicle);
+                        break;
+                }
             }
         }
 
         public Vehicle RemoveFromQueue(int side)
         {
-            switch (side)
+            lock (_monitor)
             {
-                case 1:
-                    return _up.Dequeue();
-                case 2:
-                    return _down.Dequeue();
-                case 3:
-                    return _left.Dequeue();
-                case 4:
-                    return _right.Dequeue();
-                default:
-                    return null; //Tu jakiejs funkcji się używa ale nie pamiętam, zapytamy się na zajęciach;
+                switch (side)
+                {
+                    case 1:
+                        return _up.Dequeue();
+                    case 2:
+                        return _down.Dequeue();
+                    case 3:
+                        return _left.Dequeue();
+                    case 4:
+                        return _right.Dequeue();
+                    default:
+                        return null; //Tu jakiejs funkcji się używa ale nie pamiętam, zapytamy się na zajęciach;
+                }
             }
         }
 
@@ -68,7 +74,7 @@ namespace Logic_Layer
                     amountOfVehicles = _right.Count();
                     break;
                 default:
-                    return 0;  //warunek dotyczący wyboru 1 z 4 jezdni będzie wyznaczany przed wywołaniem funkcji, te defaulty są tylko po to by visual skompilował
+                    return 0;
             }
             return amountOfVehicles;
         }

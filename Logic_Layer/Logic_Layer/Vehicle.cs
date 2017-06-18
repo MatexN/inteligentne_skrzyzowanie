@@ -36,7 +36,11 @@ namespace Logic_Layer
                 {
                     _queueOfCars.AddToQueue(this, chosenQueue);
                 }
-                Thread.Sleep(_speed *40);
+                Thread.Sleep(_speed *100);
+                if (_speed == 1)
+                {
+                    Thread.Sleep(300);
+                }
             }
         }
 

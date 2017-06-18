@@ -14,8 +14,6 @@ namespace Logic_Layer
         private QueueOfCars _queueOfCars;
         private Object _monitor;
         private bool _running = true;
-        public int First { get; set; }
-        public int Second { get; set; }
         public int _amountOfSTrack;
         public int _amountOfCar;
         public int _amountOfTruck;
@@ -38,8 +36,8 @@ namespace Logic_Layer
                 int side2 = _timeToGo;
                 lock (_monitor)
                 {
-                    Monitor.PulseAll(_monitor);
-                    Thread.Sleep(500);
+                    Thread.Sleep(600);
+                    Monitor.PulseAll(_monitor);   
                 }
                 while (side1 > 0 && side2 > 0)
                 {

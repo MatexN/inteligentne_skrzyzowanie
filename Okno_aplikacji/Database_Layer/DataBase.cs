@@ -14,7 +14,7 @@ namespace Database_Layer
         }
         public void FillDatabase(string sessionTime, string sTrack, string car, string truck)
         {
-            string sessionNumber = _dataItems.Count().ToString();
+            string sessionNumber = (_dataItems.Count()+1).ToString();
             var session = new DataItem
             {
                 SessionNumber = sessionNumber,
